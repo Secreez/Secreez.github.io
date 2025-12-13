@@ -1,0 +1,36 @@
+# Hugo generated files
+public/
+resources/
+.hugo_build.lock
+
+# Obsidian
+.obsidian/
+.trash/
+
+# Private content
+private/
+daily/
+drafts/
+
+# Personal notes/test files
+TODO*.md
+CACHEDIR.TAG
+
+# Python virtual environment (if you created one here)
+bin/
+lib/
+pyvenv.cfg
+*.pyc
+__pycache__/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
