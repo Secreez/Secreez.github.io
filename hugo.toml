@@ -40,12 +40,12 @@ buildExpired = false
   
   # Home page info
   [params.homeInfoParams]
-  Title = "Maxwell Optimization"
+  Title = "Max Elixhauser"
   Content = """
   ### Welcome
-
+  
   MSc student @ University of Salzburg (Applied Geoinformatics). Research assistant building publishing infrastructure for distance learning at UNIGIS Salzburg.
-  \n
+  
   ### Most of my time
 
   Quarto Learning Infrastructure maintenance and the eternal triage of feature requests vs. abstraction vs. "please don't make me maintain this forever." Workflow optimization, Git training for colleagues across time zones. Occasionally: actual research when dragged into data analysis.
