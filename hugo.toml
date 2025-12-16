@@ -42,11 +42,17 @@ buildExpired = false
   [params.homeInfoParams]
   Title = "Maxwell Optimization"
   Content = """
-  MSc student @ University of Salzburg (Applied Geoinformatics). Research assistant building publishing infrastructure for our distance learning program at UNIGIS Salzburg.
+  ### Welcome
 
-  Most of my time: Quarto Learning Infrastructure maintenance and the eternal triage of feature requests vs. abstraction vs. "please don't make me maintain this forever." Workflow optimization, Git training for internal and external colleagues across time zones. Occasionally: actual research when my colleague drags me into data analysis.
+  MSc student @ University of Salzburg (Applied Geoinformatics). Research assistant building publishing infrastructure for distance learning at UNIGIS Salzburg.
+  \n
+  ### Most of my time
 
-  This site is technical notes, systems thinking, and occasional shitposts about workflows. Not a portfolio. Not "passionate about innovation" energy. Just work and what I've figured out.
+  Quarto Learning Infrastructure maintenance and the eternal triage of feature requests vs. abstraction vs. "please don't make me maintain this forever." Workflow optimization, Git training for colleagues across time zones. Occasionally: actual research when dragged into data analysis.
+
+  ### What this site is
+
+  Technical notes, systems thinking, occasional workflow rants. Not a portfolio. Not "passionate about innovation" energy. Just work and what I've figured out.
 
   If you're here for Quarto tips: cool. If you're here because something broke: also cool. If you're recruiting for a fintech startup: wrong guy.
   """

@@ -1,0 +1,9 @@
+/* Add space above h3 headings in home-info */
+.home-info h3:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
+/* Optional: adjust space below h3 if needed */
+.home-info h3 {
+  margin-bottom: 0.75rem;
+}
