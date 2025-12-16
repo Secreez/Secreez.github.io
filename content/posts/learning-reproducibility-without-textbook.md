@@ -12,7 +12,7 @@ There's no course that teaches this. You just figure it out by thinking about wh
 
 For our project, I had two people in mind the entire time: the auditor who wants to break the code, and the interested reader who wants to understand it. Every decision you're about to read? Built for one of those two people.
 
-> But before I'm rambling like an LLM and eating your attention span as breakfast...
+> But before I'm rambling like an LLM and eating your attention span for breakfast...
 
 ---
 
