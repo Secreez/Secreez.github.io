@@ -3,13 +3,7 @@ public/
 resources/
 .hugo_build.lock
 
-# Obsidian
-.obsidian/
-.trash/
-
-# Private content
-private/
-daily/
+# Draft content
 drafts/
 
 # Personal notes/test files

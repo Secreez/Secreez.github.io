@@ -9,6 +9,10 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 
+# Automatically track last modified dates from Git
+[frontmatter]
+  lastmod = [":git", "lastmod", "date"]
+
 # Minify output
 [minify]
   disableXML = true
@@ -18,6 +22,7 @@ buildExpired = false
   env = 'production'
   description = "..."
   author = "Max Elixhauser"
+  ShowLastMod = true  # Shows "Last updated: [date]" on posts
   
   # Display settings
   ShowReadingTime = true
@@ -60,11 +65,6 @@ buildExpired = false
   name = "Posts"
   url = "/posts/"
   weight = 1
-
-[[menu.main]]
-  name = "Portfolio"
-  url = "/portfolio/"
-  weight = 2
 
 [[menu.main]]
   name = "About"

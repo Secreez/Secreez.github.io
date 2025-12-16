@@ -34,8 +34,6 @@ This is different from **replicability**, which is:
 
 For this post, I'm focusing on **reproducibility**... well, the computational kind. Can someone else run your pipeline and verify your claims? That's the bar.
 
----
-
 ## Reproducibility in practice (the usual advice)
 
 Standard reproducibility advice looks like this:
@@ -51,8 +49,6 @@ Standard reproducibility advice looks like this:
 It's like saying "write good code" or "communicate clearly" - true, but how? Because it doesn't tell you *why* those things matter, or *when* they actually help, or *who* they're for. It's prescriptive rules without the underlying logic.
 
 Here's what actually works: **Think about your stakeholders.** Big surprise, I know.
-
----
 
 ## The two-stakeholder framework
 
@@ -80,8 +76,6 @@ This person wants to *understand* your work. They're asking:
 - Clear structure (`data_raw/`, `data_manipulated/`, `outputs/`)
 - Sensible defaults (relative paths, documented dependencies)
 
----
-
 ## Case study: COVID-19 economy–mortality nexus
 
 We analyzed how **economic development** (GDP), **health systems** (UHC coverage), **demographics** (age), and **vaccination** relate to **excess mortality** across 79 countries. Six data sources. Inconsistent formats. Licensing chaos. The stakeholder lens kept it from becoming a dumpster fire.
@@ -104,8 +98,6 @@ Pin snapshot dates in `DATA_SOURCES.md`:
 The auditor asks: "Which version?" You answer: "This exact one, here's the date, here's the license, here's the raw file." No ambiguity. No "well, we got it from somewhere around Q2 2024..."
 
 Also: every dataset has its own `licenses/` subfolder with the actual CC BY 4.0 / WHO terms. The auditor wants to know if they can legally fork this for their thesis. Now they can check without guessing.
-
----
 
 ### 2) ISO3 standardization (for the auditor again)
 
@@ -131,8 +123,6 @@ map_iso3 <- function(x) {
 **Why it matters:**  
 You *cannot* just run `countrycode()` and pray. The auditor would've caught those 12 missing countries immediately. Now? Zero lost. Edge cases are documented in code, not in excuses.
 
----
-
 ### 3) Error handling (still for the auditor)
 
 **The problem:**  
@@ -154,8 +144,6 @@ At the end, export a **processing summary CSV**: how many countries succeeded wi
 The auditor tests your code with edge cases. The pipeline doesn't crash. It logs failures transparently. That's the difference between "robust code" and "code that only works on your machine with your exact data."
 
 We also quantified uncertainty in the GAM estimates. Relative confidence interval widths ranged from <1% to ~11%, with Armenia showing the highest at 10.74% (see Figure A2 in the paper). High confidence across the board.
-
----
 
 ### 4) Modular pipeline (for the interested reader)
 
@@ -180,8 +168,6 @@ Step 2 breaks? Fix Step 2. You don't re-run Step 1 like a psychopath.
 Someone forks your repo for their thesis. They want to see *just* the data loading logic. Boom, `01_loader.R`. They want to regenerate *just* Figure 3. Boom, `04a`. They don't need to wade through 2000 lines and guess which part does what.
 
 And everything uses `here::here()` for paths, so it works on my Windows machine, Christian's Mac, some master student's Linux VM. No `setwd("/Users/max/Documents/...")` nonsense.
-
----
 
 ### 5) The payoff
 
@@ -216,8 +202,6 @@ Before you write code, ask:
 3. What will break for them?
 
 The tools follow from the answers.
-
----
 
 ## Practical takeaway
 
