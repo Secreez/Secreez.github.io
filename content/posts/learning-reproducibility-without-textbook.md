@@ -1,10 +1,12 @@
 ---
 title: "Learning Reproducibility Without a Textbook"
-date: 2025-12-15
-tags: ["reproducibility", "R", "workflow", "data", "geoinformatics"]
+date: 2025-12-16
+tags: ["reproducibility", "R", "workflow", "systems-analysis", "open-science", "COVID-19"]
 ---
 
-Last week I presented the reproducibility infrastructure we built for a [COVID-19 mortality study](https://doi.org/10.3390/systems13110971) to a group of master's students. About 14 people showed up, smaller than we'd hoped, but shit happens.
+Last week I presented the reproducibility infrastructure we built for a COVID-19 mortality study to a group of master's students. About 14 people showed up, smaller than we'd hoped, but shit happens.
+
+The study itself (Neuwirth & Elixhauser, 2025) analyzed how economic development, health systems, and vaccination relate to excess mortality across 79 countries. Christian handled the models and research questions. I built the reproducibility pipeline.
 
 One student asked for the GitHub repo link. Another asked how to learn R. Simple questions. But watching them engage with the work made something clear: **reproducibility isn't about technical perfection. It's about being useful to the next person who touches your work.**
 
@@ -12,13 +14,13 @@ There's no course that teaches this. You just figure it out by thinking about wh
 
 For our project, I had two people in mind the entire time: the auditor who wants to break the code, and the interested reader who wants to understand it. Every decision you're about to read? Built for one of those two people.
 
-> But before I'm rambling like an LLM and eating your attention span for breakfast...
+> But before I ramble like an LLM and lose you entirely...
 
 ---
 
 ## What "reproducibility" actually means (and why it matters)
 
-The [National Academies of Sciences](https://www.ncbi.nlm.nih.gov/books/NBK547531/) defines it like this:
+The National Academies of Sciences, Engineering, and Medicine (2019) defines it like this:
 
 > **Reproducibility** is obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis.
 
@@ -162,7 +164,7 @@ Numbered scripts, each doing **one thing**:
 04c_tables.R              # Tables 1-4
 ```
 
-Step 2 breaks? Fix Step 2. You don't re-run Step 1 like a psychopath.
+Step 2 breaks? Fix Step 2. You don't re-run Step 1 just like that.
 
 **Why it matters:**  
 Someone forks your repo for their thesis. They want to see *just* the data loading logic. Boom, `01_loader.R`. They want to regenerate *just* Figure 3. Boom, `04a`. They don't need to wade through 2000 lines and guess which part does what.
