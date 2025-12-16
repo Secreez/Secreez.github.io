@@ -1,4 +1,4 @@
-baseURL = 'https://Secreez.github.io/'
+baseURL = = 'https://secreez.github.io/'
 languageCode = 'en-us'
 title = 'Maxwell Optimization'
 theme = 'PaperMod'
